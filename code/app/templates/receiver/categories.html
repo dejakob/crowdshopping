@@ -1,15 +1,17 @@
-<div class="{{showStore ? 'desktop' : ''}}">
+<div>
 	<div class="search">
 		<input type="text"/>
 	</div>
 	<ul id="categories">
-		<li ng-repeat="cat in categories" style="background-image: url(img/products/{{cat.img}})">
-			<span>
-				<a href="#/receiver-add-list/product/{{cat.value}}">{{cat.name}}</a>
-			</span>
-		</li>
+        <a href="#/receiver-add-list/product/{{cat.value}}">
+            <li ng-repeat="cat in categories" style="background-image: url(img/products/{{cat.img}})">
+                <span>
+                    {{cat.name}}
+                </span>
+            </li>
+        </a>
 	</ul>
-    <div class="mobile fixedButton" id="showList" data-ng-click="showStore = false">
-        <i class="fa fa-backward"></i>
+    <div class="mobile fixedButton" id="showList">
+        <i class="fa fa-backward" data-ng-click="showStore = false"></i>
     </div>
 </div>

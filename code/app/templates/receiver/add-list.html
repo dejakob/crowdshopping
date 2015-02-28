@@ -8,5 +8,5 @@
         <i class="fa fa-cart-plus" data-ng-click="showStore = true"></i>
     </div>
 </aside>
-<article class="mrg" ui-view="right" class="{{menuOpened ? 'desktop' : ''}}">
+<article ui-view="right" class="mrg {{showStore ? '' : 'desktop'}}">
 </article>

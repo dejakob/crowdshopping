@@ -66,7 +66,7 @@ article button.big {
   font-family: "Lato", serif;
   font-weight: 100;
 }
-article #categories > li {
+article #categories > a > li {
   height: 250px;
   margin-left: 10px;
   margin-top: 20px;
@@ -78,7 +78,7 @@ article #categories > li {
   border-radius: 5px;
   overflow: hidden;
 }
-article #categories > li > span {
+article #categories > a > li > span {
   margin-top: 200px;
   background-color: #fff;
   font-size: 24px;
@@ -91,7 +91,7 @@ article #products {
   margin: 15px;
   list-style: none;
 }
-article #products > li {
+article #products > a > li {
   padding: 7px;
   margin: 3px 0;
   background-color: #fff;
@@ -204,7 +204,7 @@ article .search input {
     left: 50%;
     margin-left: -20px;
   }
-  #categories > li {
+  #categories > a > li {
     margin-right: 10px;
   }
   .desktop {
@@ -228,7 +228,7 @@ article .search input {
   article.mrg {
     margin-left: 300px;
   }
-  #categories > li {
+  #categories > a > li {
     width: 250px;
     float: left;
   }
