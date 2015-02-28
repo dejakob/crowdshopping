@@ -30,11 +30,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			}
 		})
 		.state('receiver-add-list.product', {
+			url: "product/:category",
 			views: {
-				url: "/receiver-add-list/product/:category",
-				'': {
-					templateUrl: "templates/receiver/add-list.html"
-				},
 				'right@receiver-add-list': {
 					templateUrl: "templates/receiver/products.html",
 					controller: "ProductCtrl"
