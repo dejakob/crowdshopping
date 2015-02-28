@@ -111,7 +111,7 @@ article #products > li {
   border-radius: 3px;
 }
 article .search {
-  margin-top: 10px;
+  padding-top: 10px;
   height: 30px;
   margin-left: 20px;
   margin-right: 10px;
