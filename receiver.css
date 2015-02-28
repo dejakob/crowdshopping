@@ -92,6 +92,16 @@ article #categories > li > span {
   height: 50px;
   line-height: 50px;
 }
+article #products {
+  margin: 15px;
+  list-style: none;
+}
+article #products > li {
+  padding: 7px;
+  margin: 3px 0;
+  background-color: #fff;
+  border-radius: 3px;
+}
 article .search {
   margin-top: 10px;
   width: 600px;
