@@ -25,8 +25,6 @@ nav#menu ul {
   background: rgba(255, 255, 255, 0.95);
 }
 aside {
-  float: left;
-  width: 300px;
   height: 100vh;
   background: rgba(255, 255, 255, 0.8);
 }
@@ -34,14 +32,11 @@ aside h1 {
   text-align: center;
   font-family: 'Lato', serif;
   font-weight: 100;
-  margin: 10px 0;
+  padding: 10px 0;
 }
 aside li {
   padding-left: 25px;
   padding-bottom: 7px;
-}
-article.mrg {
-  margin-left: 300px;
 }
 article h1 {
   font-family: 'Lato', serif;
@@ -73,9 +68,7 @@ article button.big {
 }
 article #categories > li {
   height: 250px;
-  width: 250px;
-  float: left;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: 20px;
   list-style: none;
   background: rgba(255, 255, 255, 0.8);
@@ -107,7 +100,7 @@ article #products > li {
 article .search {
   padding-top: 10px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-right: 10px;
   position: relative;
 }
@@ -173,6 +166,13 @@ article .search input {
     display: block;
     font-size: 25px;
   }
+  nav#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
   nav#menu.opened ul > li {
     display: block;
     height: 25px;
@@ -188,15 +188,48 @@ article .search input {
     margin: 0;
     padding: 0;
   }
+  article {
+    margin-top: 50px;
+  }
+  .fixedButton {
+    color: #fff;
+    background-color: #f57a21;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -20px;
+  }
+  #categories > li {
+    margin-right: 10px;
+  }
+  .desktop {
+    display: none!important;
+  }
 }
 @media screen and (min-width: 701px) {
   .mobile {
-    display: none;
+    display: none!important;
   }
   nav#menu ul > li {
     float: left;
     width: 200px;
     list-style: none;
     text-align: center;
+  }
+  aside {
+    float: left;
+    width: 300px;
+  }
+  article.mrg {
+    margin-left: 300px;
+  }
+  #categories > li {
+    width: 250px;
+    float: left;
   }
 }

@@ -38,8 +38,6 @@ nav#menu {
 }
 
 aside {
-  float: left;
-  width: 300px;
   height: 100vh;
   background: rgba(255,255,255,0.8);
 
@@ -47,7 +45,7 @@ aside {
     text-align: center;
     font-family: 'Lato', serif;
     font-weight: 100;
-    margin: 10px 0;
+    padding: 10px 0;
   }
 
   li {
@@ -57,9 +55,6 @@ aside {
 }
 
 article {
-  &.mrg {
-    margin-left: 300px;
-  }
   h1 {
     font-family: 'Lato', serif;
     font-weight: 300;
@@ -91,9 +86,7 @@ article {
   #categories {
     >li {
       height: 250px;
-      width: 250px;
-      float: left;
-      margin-left: 20px;
+      margin-left: 10px;
       margin-top: 20px;
       list-style: none;
       background: rgba(255,255,255,0.8);
@@ -129,7 +122,7 @@ article {
   .search {
     padding-top: 10px;
     height: 30px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 10px;
     position: relative;
     input {
@@ -211,31 +204,74 @@ article {
       }
     }
   }
-  nav#menu.opened {
-    ul {
-      > li {
-        display: block;
-        height: 25px;
-        padding-top: 15px;
-        background-color: #fff;
-        width: 100%;
-        left: 0;
-        margin: 0 0 0 -10px;
-        padding-right: 10px;
-        padding-left: 10px;
-        &.mobile {
+  nav#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    &.opened {
+      ul {
+        > li {
+          display: block;
+          height: 25px;
+          padding-top: 15px;
+          background-color: #fff;
+          width: 100%;
+          left: 0;
+          margin: 0 0 0 -10px;
+          padding-right: 10px;
+          padding-left: 10px;
+          &.mobile {
 
-          margin: 0;
-          padding: 0;
+            margin: 0;
+            padding: 0;
+          }
         }
       }
     }
+  }
+
+  article {
+    margin-top: 50px;
+  }
+
+  .fixedButton {
+    color: #fff;
+    background-color: @orange;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -20px;
+  }
+
+  #addSomething {
+
+  }
+
+  #showList {
+
+  }
+
+  #categories {
+    > li {
+      margin-right: 10px;
+    }
+  }
+
+  .desktop {
+    display: none!important;
   }
 }
 
 @media screen and (min-width: 701px) {
   .mobile {
-    display: none;
+    display: none!important;
   }
 
   nav#menu {
@@ -246,6 +282,25 @@ article {
         list-style: none;
         text-align: center;
       }
+    }
+  }
+
+  aside {
+    float: left;
+    width: 300px;
+  }
+
+  article {
+    &.mrg {
+      margin-left: 300px;
+    }
+  }
+
+  #categories {
+    > li {
+
+      width: 250px;
+      float: left;
     }
   }
 }
