@@ -1,10 +1,10 @@
 <article data-ng-if="!menuOpened">
     <ul id="receiverShoppingListList">
-        <li>
+        <li data-ng-model="listlist" data-ng-click="listlist.opened = !listlist.opened">
             <span class="productCount">4</span>
-            <span class="fwb name">Eggs, Milk....</span> <span class="distance">Within 5km, 5 min ago</span>
+            <span class="fwb name" data-ng-show="!listlist.opened">Eggs, Milk....</span> <span class="distance">Within 5km, 5 min ago</span>
             <div class="fuckTheRules"></div>
-            <ul class="innerItems">
+            <ul class="innerItems" data-ng-show="listlist.opened">
                 <li>Eggs</li>
                 <li>Milk</li>
             </ul>

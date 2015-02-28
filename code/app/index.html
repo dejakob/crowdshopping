@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="css/receiver.css"/>
 </head>
 <body>
-  <nav id="menu" class="{{menuOpened ? 'opened' : ''}}">
+  <nav id="menu" class="{{menuOpened ? 'opened' : ''}}" data-ng-click="menuOpened = !menuOpened">
       <ul>
-          <li class="mobile" id="menuOpener" data-ng-click="menuOpened = !menuOpened"><i class="fa fa-list-ul"></i></li>
+          <li class="mobile" id="menuOpener"><i class="fa fa-list-ul"></i></li>
           <li><a ui-sref="receiver-choose-shop">Create</a></li>
           <li><a ui-sref="receiver-my-list">My lists</a></li>
           <li>Help</li>
