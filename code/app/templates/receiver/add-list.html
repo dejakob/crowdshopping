@@ -1,12 +1,12 @@
-<aside class="{{showStore ? 'desktop' : ''}}">
+<aside class="{{$root.showStore ? 'desktop' : ''}}">
 	<h1>Shopping list:</h1>
 	<ul id="newList">
 		<li>Eggs</li>
 		<li>Milk</li>
 	</ul>
     <div class="mobile fixedButton" id="addSomething">
-        <i class="fa fa-cart-plus" data-ng-click="showStore = true"></i>
+        <i class="fa fa-cart-plus" data-ng-click="$root.showStore = true"></i>
     </div>
 </aside>
-<article ui-view="right" class="mrg {{showStore ? '' : 'desktop'}}">
+<article ui-view="right" class="mrg {{$root.showStore ? '' : 'desktop'}}">
 </article>
