@@ -33,12 +33,7 @@ nav#menu {
     margin: 0;
     border-bottom: 1px #fff solid;
     background: rgba(255,255,255,0.95);
-    > li {
-      float: left;
-      width: 200px;
-      list-style: none;
-      text-align: center;
-    }
+
   }
 }
 
@@ -188,4 +183,69 @@ article {
 
 .fuckTheRules {
   clear: both;
+}
+
+.left {
+  text-align: left!important;
+}
+
+.fs20 {
+  font-size: 20px;
+}
+
+#menuOpener {
+  display: block;
+  width: 100%;
+
+}
+
+@media screen and (max-width: 700px) {
+  nav#menu {
+    ul {
+      > li {
+        display: none;
+        &.mobile {
+          display: block;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  nav#menu.opened {
+    ul {
+      > li {
+        display: block;
+        height: 25px;
+        padding-top: 15px;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        margin: 0 0 0 -10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        &.mobile {
+
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .mobile {
+    display: none;
+  }
+
+  nav#menu {
+    ul {
+      > li {
+        float: left;
+        width: 200px;
+        list-style: none;
+        text-align: center;
+      }
+    }
+  }
 }
