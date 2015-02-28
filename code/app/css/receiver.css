@@ -154,6 +154,10 @@ article .search input {
   padding-top: 10px;
   padding-right: 10px;
 }
+#receiverShoppingListList > li .innerItems {
+  margin-left: 20px;
+  margin-top: 10px;
+}
 .fuckTheRules {
   clear: both;
 }
