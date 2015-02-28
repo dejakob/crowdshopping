@@ -19,8 +19,27 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 		})
 		.state('receiver-add-list', {
 			url: "/receiver-add-list/:shop",
-			controller: "AddListCtrl",
-			templateUrl: "templates/receiver/add-list.html"
+			views: {
+				'': {
+					templateUrl: "templates/receiver/add-list.html"
+				},
+				'right@receiver-add-list': {
+					templateUrl: "templates/receiver/categories.html",
+					controller: "CategoryCtrl"
+				}
+			}
+		})
+		.state('receiver-add-list.product', {
+			views: {
+				url: "/receiver-add-list/product/:category",
+				'': {
+					templateUrl: "templates/receiver/add-list.html"
+				},
+				'right@receiver-add-list': {
+					templateUrl: "templates/receiver/products.html",
+					controller: "ProductCtrl"
+				}
+			}
 		})
 		.state('receiver-my-list', {
 			url: "/receiver-my-list",

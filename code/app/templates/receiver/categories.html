@@ -1,0 +1,12 @@
+<div>
+	<div class="search">
+		<input type="text"/>
+	</div>
+	<ul id="categories">
+		<li ng-repeat="cat in categories" style="background-image: url({{cat.img}})">
+			<span>
+				<a ui-sref="receiver-add-list.product({category: cat.value})" href="javascript://">{{cat.name}}</a>
+			</span>
+		</li>
+	</ul>
+</div>
