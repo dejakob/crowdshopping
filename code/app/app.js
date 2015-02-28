@@ -22,5 +22,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
 			controller: "AddListCtrl",
 			templateUrl: "templates/receiver/add-list.html"
 		})
-		;
+		.state('receiver-my-list', {
+			url: "/receiver-my-list",
+			controller: "MyListCtrl",
+			templateUrl: "templates/receiver/my-list.html"
+		});
 });
