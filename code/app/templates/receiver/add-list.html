@@ -8,5 +8,5 @@
         <i class="fa fa-cart-plus" data-ng-click="showStore = true"></i>
     </div>
 </aside>
-<article class="mrg" ui-view="right" data-ng-if="!menuOpened">
+<article class="mrg" ui-view="right" class="{{menuOpened}} ? 'mobile' : ''">
 </article>

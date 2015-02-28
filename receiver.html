@@ -17,7 +17,7 @@
     </ul>
 </nav>
 <aside style="display: none;"></aside>
-<article data-ng-if="!menuOpened">
+<article class="{{menuOpened}} ? 'mobile' : ''">
     <h1>Create a shopping list</h1>
     <button class="big">Add new</button>
 </article>
