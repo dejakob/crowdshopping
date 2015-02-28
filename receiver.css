@@ -104,10 +104,9 @@ article #products > li {
 }
 article .search {
   margin-top: 10px;
-  width: 600px;
   height: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
+  margin-right: 10px;
   position: relative;
 }
 article .search input {
