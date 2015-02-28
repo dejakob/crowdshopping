@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 body {
   font-family: 'Ubuntu', serif;
   background-image: url(../img/bg.png);
@@ -16,6 +20,7 @@ nav#menu {
 nav#menu ul {
   padding: 10px;
   height: 25px;
+  margin: 0;
   border-bottom: 1px #fff solid;
   background: rgba(255, 255, 255, 0.95);
 }
@@ -63,6 +68,7 @@ article button {
   text-align: center;
   display: block;
   cursor: pointer;
+  margin: 0 20px;
 }
 article a.button.big,
 article button.big {
